@@ -16,8 +16,8 @@ public class AppiumDriverFactory {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("app", System.getProperty("user.dir") + "/src/man/Apps/ApiDemos-debug.apk");
-        capabilities.setCapability("autoAcceptAlert",true);
+        capabilities.setCapability("app", System.getProperty("user.dir") + "/src/main/Apps/ApiDemos-debug.apk");
+        capabilities.setCapability("autoAcceptAlerts",true);
 
         try{
             driver= new AndroidDriver(new URL("http://192.168.0.186:4723/"),capabilities);
