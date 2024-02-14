@@ -1,3 +1,4 @@
+@RegressionDev @APIDemos
 Feature: API Demos
   Scenario: Verify that API demos landing page is displayed
     Given The app is launched

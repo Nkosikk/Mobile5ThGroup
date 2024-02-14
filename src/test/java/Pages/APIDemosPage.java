@@ -13,7 +13,7 @@ public class APIDemosPage {
     AndroidUtils androidUtils;
     AppiumDriverFactory appiumDriverFactory = AppiumDriverFactory.getInstanceOfAppiumDriverFactory();
 
-    private static By apiDemosTitle = By.xpath("//android.widget.TextView[contains(@text, 'API Demos')]");
+    private static By apiDemosTitle = By.xpath("//android.widget.TextView[contains(@text, 'NkosAPI Demos')]");
 
     public APIDemosPage() {
         driver = appiumDriverFactory.getDriver();
