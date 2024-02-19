@@ -14,6 +14,7 @@ public class APIDemosPage {
     AppiumDriverFactory appiumDriverFactory = AppiumDriverFactory.getInstanceOfAppiumDriverFactory();
 
     private static By apiDemosTitle = By.xpath("//android.widget.TextView[contains(@text, 'API Demos')]");
+    private static By appBTN = By.xpath("//android.widget.TextView[@content-desc=\"App\"]");
 
     public APIDemosPage() {
         driver = appiumDriverFactory.getDriver();
@@ -28,6 +29,9 @@ public class APIDemosPage {
             Assert.assertTrue(false,"Landing page was not displayed");
         }
 
+    }
+    public void clickApp(){
+        androidUtils.clickButton(appBTN);
     }
 
 }

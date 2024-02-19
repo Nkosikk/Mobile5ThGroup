@@ -20,7 +20,9 @@ public class stepsdef extends Base{
     }
     @And("User click App")
     public void userClickApp() {
+        apiDemosPage.clickApp();
     }
+
 
     @AfterStep
     public void tearDown(Scenario scenario){
