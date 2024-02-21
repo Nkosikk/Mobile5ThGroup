@@ -20,7 +20,7 @@ public class AppiumDriverFactory {
         capabilities.setCapability("autoAcceptAlerts",true);
 
         try{
-            driver= new AndroidDriver(new URL("http://192.168.8.103:4723/"),capabilities);
+            driver= new AndroidDriver(new URL("http://127.0.0.1:4723"),capabilities);
         }catch (MalformedURLException e){
             e.printStackTrace();
         }
