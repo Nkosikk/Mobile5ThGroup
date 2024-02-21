@@ -16,7 +16,7 @@ public class AppiumDriverFactory {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("app", System.getProperty("user.dir") + "/src/main/Apps/ApiDemos-debug.apk");
+        capabilities.setCapability("app", System.getProperty("user.dir") + "/src/main/Apps/app-debug.apk");
         capabilities.setCapability("autoAcceptAlerts",true);
 
         try{
