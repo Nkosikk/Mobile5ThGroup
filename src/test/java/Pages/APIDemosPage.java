@@ -15,6 +15,9 @@ public class APIDemosPage {
 
     private static By apiDemosTitle = By.xpath("//android.widget.TextView[contains(@text, 'API Demos')]");
     private static By appBTN = By.xpath("//android.widget.TextView[@content-desc=\"App\"]");
+    private static By alarmApp = By.xpath("//android.widget.TextView[@content-desc=\"Alarm\"]");
+    private static By alarmControllerMenu = By.xpath("//android.widget.TextView[@content-desc=\"Alarm Controller\"]");
+    private static By oneShotAlarmButton = By.xpath("//android.widget.TextView[@content-desc=\"One Shot Alarm\"]");
 
     public APIDemosPage() {
         driver = appiumDriverFactory.getDriver();
@@ -23,15 +26,24 @@ public class APIDemosPage {
     }
 
     public void verifyLandingPage() {
-        if (androidUtils.objectExist(apiDemosTitle)){
-            Assert.assertTrue(true,"Landing page is displayed");
-        }else {
-            Assert.assertTrue(false,"Landing page was not displayed");
+        if (androidUtils.objectExist(apiDemosTitle)) {
+            Assert.assertTrue(true, "Landing page is displayed");
+        } else {
+            Assert.assertTrue(false, "Landing page was not displayed");
         }
-
     }
-    public void clickApp(){
+
+    public void clickApp() {
         androidUtils.clickButton(appBTN);
     }
 
+    public void clickAlarm() {
+        androidUtils.clickButton(alarmApp);
+    }
+
+    public void clickAlarmController() {
+        androidUtils.clickButton(alarmControllerMenu);
+    }    public void clickOneShotAlarm() {
+        androidUtils.clickButton(oneShotAlarmButton);
+    }
 }

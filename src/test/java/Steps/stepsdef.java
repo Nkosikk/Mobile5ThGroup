@@ -9,27 +9,42 @@ import org.openqa.selenium.TakesScreenshot;
 
 import static Utils.AppiumDriverFactory.driver;
 
-public class stepsdef extends Base{
+public class stepsdef extends Base {
     @Given("The app is launched")
     public void the_app_is_launched() {
 
     }
+
     @And("User verify that the landing is displayed")
     public void user_verify_that_the_landing_is_displayed() {
         apiDemosPage.verifyLandingPage();
     }
+
     @And("User click App")
     public void userClickApp() {
         apiDemosPage.clickApp();
     }
 
-
-    @AfterStep
-    public void tearDown(Scenario scenario){
-        if (scenario.isFailed()){
-            final byte[] screenshot= ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot,"image/png","Failure Screenshot");
-        }
+    @And("User click alarm")
+    public void userClickAlarm() {
+        apiDemosPage.clickAlarm();
     }
 
+    @And("user click alarm controller")
+    public void userClickAlarmController() {
+        apiDemosPage.clickAlarmController();
+    }
+
+    @When("user click one shot alarm")
+    public void userClickOneShotAlarm() {
+        apiDemosPage.clickOneShotAlarm();
+    }
+
+    @AfterStep
+    public void tearDown(Scenario scenario) {
+        if (scenario.isFailed()) {
+            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", "Failure Screenshot");
+        }
+    }
 }
