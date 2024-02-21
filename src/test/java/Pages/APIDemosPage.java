@@ -17,7 +17,7 @@ public class APIDemosPage {
     private static By appBTN = By.xpath("//android.widget.TextView[@content-desc=\"App\"]");
     private static By alarmApp = By.xpath("//android.widget.TextView[@content-desc=\"Alarm\"]");
     private static By alarmControllerMenu = By.xpath("//android.widget.TextView[@content-desc=\"Alarm Controller\"]");
-    private static By oneShotAlarmButton = By.xpath("//android.widget.TextView[@content-desc=\"One Shot Alarm\"]");
+    private static By oneShotAlarmButton = By.id("io.appium.android.apis:id/one_shot");
 
     public APIDemosPage() {
         driver = appiumDriverFactory.getDriver();
