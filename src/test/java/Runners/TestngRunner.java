@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = "src/test/java/Features",
         glue = {"Steps"},
-        tags = "@APIDemos",
+        tags = "@MusicPlayer",
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         publish = true)
 public class TestngRunner extends AbstractTestNGCucumberTests {
