@@ -20,13 +20,10 @@ public class AndroidUtils {
         }
     }
 
-    public void clickButton(By by){
-        WebElement element=driver.findElement(by);
-        if(element.isDisplayed()){
-                element.click();
+    public void clickButton(By by) {
+        WebElement element = driver.findElement(by);
+        if (element.isDisplayed()) {
+            element.click();
         }
-
-
     }
-
 }

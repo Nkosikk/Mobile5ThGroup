@@ -40,6 +40,23 @@ public class stepsdef extends Base {
         apiDemosPage.clickOneShotAlarm();
     }
 
+
+    @And("verify that app is luanched")
+    public void verifyThatAppIsLuanched() {
+        musicPlayerPage.closePopup();
+        musicPlayerPage.verifyAppIsLaunched();
+    }
+
+    @And("click Wake Up")
+    public void clickWakeUp() {
+        musicPlayerPage.clickWakeUp();
+    }
+
+    @And("Play Guisha")
+    public void playGuisha() {
+        musicPlayerPage.clickGuisha();
+    }
+
     @AfterStep
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {
