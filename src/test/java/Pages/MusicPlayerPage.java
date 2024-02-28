@@ -13,7 +13,9 @@ public class MusicPlayerPage {
     AndroidUtils androidUtils;
     AppiumDriverFactory appiumDriverFactory = AppiumDriverFactory.getInstanceOfAppiumDriverFactory();
 
-    private static By apiDemosTitle = By.xpath("");
+    private static By musicpTitle = By.xpath("//android.widget.TextView[@text=\"UAMP\"]");
+    private static By wakeupAlbum = By.xpath("//android.widget.TextView[@resource-id=\"com.example.android.uamp.next:id/title\" and @text=\"Wake Up\"]");
+    private static By songGeisha = By.xpath("//android.widget.TextView[@resource-id=\"com.example.android.uamp.next:id/title\" and @text=\"Geisha\"]");
 
     public MusicPlayerPage() {
         driver = appiumDriverFactory.getDriver();
@@ -22,7 +24,7 @@ public class MusicPlayerPage {
     }
 
     public void verifyAppIsLaunched() {
-        if (androidUtils.objectExist(apiDemosTitle)) {
+        if (androidUtils.objectExist(musicpTitle)) {
             Assert.assertTrue(true, "Landing page is displayed");
         } else {
             Assert.assertTrue(false, "Landing page was not displayed");
@@ -30,7 +32,11 @@ public class MusicPlayerPage {
     }
 
     public void clickWakeUp() {
-        androidUtils.clickButton(change this);
-    }
 
+        androidUtils.clickButton(wakeupAlbum);
+    }
+    public void playGuisha() {
+
+        androidUtils.clickButton(songGeisha);
+    }
 }
